@@ -28,7 +28,7 @@ return(
     </div>
   </div>
   <div className="section-image">
-    <img src="../../src/assets/foto.jpeg" alt="foto" />
+    <img src="../src/assets/foto.jpeg" alt="foto" />
   </div>
 </section>
 
