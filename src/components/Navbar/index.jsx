@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -14,33 +14,48 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { useRef } from 'react';
-
 
 const drawerWidth = 240;
-const navItems = ['About me', 'Services', 'Contact me'];
+const navItems = ['About', 'Services', 'Contact me'];
 
+const sectionIdMap = {
+  'Sobre': 'sobre',
+  'Serviços': 'servicos',
+  'Contate me': 'contate-me',
+};
 
 function DrawerAppBar(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const contentRef = useRef(null);
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     const contentElement = contentRef.current;
-  
+
     if (element && contentElement) {
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start', // Scroll to the top of the target element
-        inline: 'nearest', // Keep the element visible if partially visible
+        block: 'start',
+        inline: 'nearest',
       });
-      handleDrawerToggle(); // Close the drawer after clicking a link (optional)
+      handleDrawerToggle();
     }
   };
+
+  const container = window !== undefined ? () => window().document.body : undefined;
+
+  const handleNavItemClick = (item) => {
+    const sectionId = sectionIdMap[item];
+    if (sectionId) {
+      scrollToSection(sectionId);
+    }
+  };
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -50,7 +65,7 @@ function DrawerAppBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => handleNavItemClick(item)}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -59,12 +74,10 @@ function DrawerAppBar(props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{backgroundColor: '#1d1c1c;'}}>
+      <AppBar component="nav" sx={{ backgroundColor: '#1d1c1c;' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -80,11 +93,11 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Portfolio
+            DANILO <span style={{ color: "gray" }}>BARROS</span>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#ffffff'}} href={`#${item.toLowerCase().replace(/ /g, '-')}`} >
+              <Button key={item} sx={{ color: '#ffffff' }} href={`#${item.toLowerCase().replace(/ /g, '-')}`} >
                 {item}
               </Button>
             ))}
@@ -98,11 +111,11 @@ function DrawerAppBar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#1d1c1c', color:'#ffffff' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#1d1c1c', color: '#ffffff' },
           }}
         >
           {drawer}
@@ -110,16 +123,13 @@ function DrawerAppBar(props) {
       </nav>
       <Box component="main" sx={{ p: 3 }} ref={contentRef}>
         <Toolbar />
+        {/* Adicione aqui o conteúdo das seções, como About, Serviços, Contate-me */}
       </Box>
     </Box>
   );
 }
 
 DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 

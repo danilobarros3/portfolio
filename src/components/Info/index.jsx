@@ -7,24 +7,24 @@ return(
 <section className="info">
   <div className="section-name">
     <h1>
-      Hi, I am
+      Olá, eu sou
     </h1>
     <span> Danilo Barros </span>
     <div className="subtitle">
-      Frontend Developer
+      Desenvolvedor Front-end Jr.
     </div>
     <div className="buttons-container">
       <Button 
         text="Download CV" 
-        link="https://drive.google.com/file/d/19n9dIxg13N9JUINgIEGrFqH5fa8294EF/view?usp=sharing" 
+        link="https://drive.google.com/file/d/16XxGsbb3nZP4j8mnltruB5BAqrjr4s3x/view?usp=sharing" 
         variant="contained" 
-        style={{ backgroundColor: '#27AE60', marginRight:"20px" }}
+        style={{ backgroundColor: '#27AE60' }}
         />
-      <Button 
-        text="Learn More" 
+      {/* <Button 
+        text="Saiba mais" 
         variant="outlined" 
         style={{ borderColor: '#fff', color: '#fff' }}
-      />
+      /> */}
     </div>
   </div>
   <div className="section-image">

@@ -5,13 +5,11 @@ import Tecnologies from "./components/Tecnologies";
 import Skills from "./components/Skills";
 import Register from "./components/Register";
 import Footer from "./components/Footer";
-
-
 function App() {
   return(
     <div className="App">
         <Navbar/>
-        <div className="container">
+      <div className="container">
         <Info/>
         <About/>
         <Tecnologies/>
@@ -19,7 +17,6 @@ function App() {
         <Register/>
         <Footer/>
         </div>
-        
     </div>
   )
 }

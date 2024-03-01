@@ -6,19 +6,19 @@ import "./index.css";
 function Tecnologies() {
 return(
 <section id="services" className="tecnologies">
-  <h2>What I Do</h2>
+  <h2>Habilidades</h2>
   <div className="cards">
     <div className="card card-tecnologies">
       <img src="../../src/assets/vector.png" alt="" />
-      <span>Software Developer</span>
+      <span>Desenvolvedor Front-end</span>
     </div>
     <div className="card card-tecnologies">
       <img src="../../src/assets/quadrado.png" alt="" />
-      <span>Web Development</span>
+      <span>Desenvolvedor Web</span>
     </div>
     <div className="card card-tecnologies">
       <img src="../../src/assets/dev.png" alt="" />
-      <span>Web Design</span>
+      <span>Desenvolvedor Mobile</span>
     </div>
   </div>
 </section>

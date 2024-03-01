@@ -66,12 +66,13 @@ h2{
   text-align: center; 
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 38px;
+  margin-bottom: 10px;
 }
 .App{
   background-color: #1d1c1c;
   color: white;
   font-family: "DM Sans"; 
+  min-height: 100vh;
 }
 .container{
   width: 100%;
@@ -79,6 +80,8 @@ h2{
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
+  height: 100%;
+  background-color: #1d1c1c;
 }
 .card{
   background-color: #212121;
