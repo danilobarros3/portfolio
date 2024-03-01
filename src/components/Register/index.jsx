@@ -43,7 +43,7 @@ function Register() {
 
   return (
     <section id="contact-me">
-      <h2>Contate me</h2>
+      <h2>Contato</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-input">
           <FormInput
