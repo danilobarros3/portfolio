@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  width: 100%;
+  border-bottom: 5px solid transparent;
+  transition: border-bottom-color 0.3s; 
+}
+
+.card:hover {
+  border-bottom-color: #27AE60;
+}
+
+@media (max-width: 900px) {
+  .card {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px; 
+  }
+
+  .card > Paper {
+    padding: 10px;
+  }
+
+  .card > Paper > Button {
+    width: 100%; 
+    justify-content: center; 
+  }
+}

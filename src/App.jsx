@@ -3,8 +3,9 @@ import Info from "./components/Info";
 import About from "./components/About";
 import Tecnologies from "./components/Tecnologies";
 import Skills from "./components/Skills";
-import Register from "./components/Register";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
+// import Register from "./components/Register";
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,8 @@ function App() {
         <About />
         <Tecnologies />
         <Skills />
-        <Register />
+        <Projects/>
+        {/* <Register/> */}
         <Footer />
       </div>
     </div>

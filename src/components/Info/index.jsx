@@ -7,11 +7,11 @@ return(
 <section className="info">
   <div className="section-name">
     <h1>
-      Olá, eu sou
+      Hi, I'm
     </h1>
     <span> Danilo Barros </span>
     <div className="subtitle">
-      Desenvolvedor Front-end Jr.
+      <p>Software Developer</p>
     </div>
     <div className="buttons-container">
       <Button 

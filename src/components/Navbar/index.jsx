@@ -16,13 +16,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = ['About', 'Services', 'Contact me'];
+// const navItems = ['Sobre', 'Serviço', 'Projetos'];
 
-const sectionIdMap = {
-  'Sobre': 'sobre',
-  'Serviços': 'servicos',
-  'Contate me': 'contate-me',
-};
+// const sectionIdMap = {
+//   'Sobre': 'sobre',
+//   'Serviços': 'servicos',
+//   'Contate me': 'contate-me',
+// };
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -63,13 +63,13 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {/* {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} onClick={() => handleNavItemClick(item)}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
-        ))}
+        ))} */}
       </List>
     </Box>
   );
@@ -96,11 +96,11 @@ function DrawerAppBar(props) {
             DANILO <span style={{ color: "gray" }}>BARROS</span>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
+            {/* {navItems.map((item) => (
               <Button key={item} sx={{ color: '#ffffff' }} href={`#${item.toLowerCase().replace(/ /g, '-')}`} >
                 {item}
               </Button>
-            ))}
+            ))} */}
           </Box>
         </Toolbar>
       </AppBar>
@@ -123,7 +123,6 @@ function DrawerAppBar(props) {
       </nav>
       <Box component="main" sx={{ p: 3 }} ref={contentRef}>
         <Toolbar />
-        {/* Adicione aqui o conteúdo das seções, como About, Serviços, Contate-me */}
       </Box>
     </Box>
   );

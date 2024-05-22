@@ -20,7 +20,7 @@ return(
             <font color="#27AE60"> <span>REACTJS</span> </font>
         </div>
         <div className="card-item">
-            <span className="card-number">60%</span>
+            <span className="card-number">80%</span>
             <font color="#27AE60"> <span>NEXTJS</span> </font>
         </div>
         <div className="card-item">
@@ -28,7 +28,7 @@ return(
             <font color="#27AE60"> <span>STYLEDCOMPONENTS</span> </font>
         </div>
         <div className="card-item">
-            <span className="card-number">80%</span>
+            <span className="card-number">60%</span>
             <font color="#27AE60"> <span>TAILWINDCSS</span> </font>
         </div>
     </div>
