@@ -1,0 +1,18 @@
+{
+  "about_me": "About me",
+  "skills": "Skills",
+  "projects": "Projects",
+  "home": "Home",
+  "linkedin": "Linkedin",
+  "github": "Github",
+  "contact_me": "Contact me",
+  "years_of_experience": "Years of Experience",
+  "projects_completed": "Projects Completed",
+  "hello_i_am": "Hello, I am",
+  "front_end_developer": "Front-end Developer",
+  "about_me_heading": "aboutMe()",
+  "about_me_paragraph": "5th-semester student of Analysis and Systems Development at Facens and Front-end Developer at Lionsoft, experienced in HTML5, CSS3, ReactJS, TypeScript, NextJS, JavaScript, and Tailwind. My journey began in technical support, where I gained valuable skills in communication, teamwork, and problem-solving, providing quick and effective solutions for clients. Currently, as a Front-end Developer, I focus on creating efficient, responsive, and attractive user interfaces. I am always looking to improve my skills and learn new technologies to stay updated with the trends in software development.",
+  "companies": "Companies",
+  "freelancer": "Freelancer",
+  "hire_me": "Hire me!"
+}
