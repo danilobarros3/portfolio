@@ -8,7 +8,7 @@ export function Companies() {
       className="bg-primary px-4 md:px-16 flex flex-col gap-5 items-center overflow-x-hidden"
     >
       <h1 className="text-[#70FF00] text-3xl md:text-4xl font-bold mb-6">
-      {t("companies")}( )
+      {t("companies")}
       </h1>
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 justify-center">
         <div className="bg-[#1b1d1d] grid gap-2 rounded-2xl p-4 w-full max-w-[500px] shadow-custom-gray">

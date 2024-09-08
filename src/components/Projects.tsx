@@ -60,7 +60,7 @@ export function Projects() {
       className="bg-primary py-4 px-4 md:px-16 lg:px-24 flex flex-col items-center gap-6 md:gap-10"
     >
       <h1 className="text-[#70FF00] text-3xl md:text-4xl font-bold text-center">
-        {t("projects")}( )
+        {t("projects")}
       </h1>
       <div className="w-full max-w-5xl">
         <Carousel>

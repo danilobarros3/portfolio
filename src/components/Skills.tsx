@@ -10,15 +10,17 @@ import bitbucket from "../assets/bitbucketImage.webp";
 import jira from "../assets/jiraImage.webp";
 import github from "../assets/githubImage.svg";
 import figma from "../assets/figmaImage.webp";
+import { useTranslation } from "react-i18next";
 
 export function Skills() {
+  const { t } = useTranslation();
   return (
     <div
       id="skills"
       className="bg-primary py-10 px-4 md:px-16 flex flex-col items-center"
     >
       <h1 className="text-[#70FF00] text-3xl md:text-4xl font-bold mb-6">
-        goldenStacks( )
+      {t("skills")}
       </h1>
       <div className="flex flex-wrap justify-center gap-6 mb-10">
         <img src={typescriptImage} alt="TypeScript" className="w-16 h-16 md:w-24 md:h-24" />
