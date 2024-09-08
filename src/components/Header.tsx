@@ -18,13 +18,17 @@ export function Header() {
   };
 
   const handleResume = () => {
-    window.open("https://drive.google.com/file/d/1v7nb1bjN5Dn2m25WTbbPQGu_9bfp-hXv/view?usp=sharing")
-  }
+    window.open(
+      "https://drive.google.com/file/d/1v7nb1bjN5Dn2m25WTbbPQGu_9bfp-hXv/view?usp=sharing"
+    );
+  };
+
+  const currentLanguage = i18n.language;
 
   return (
     <>
       <div className="bg-primary flex items-center justify-between p-4 md:mb-0 mb-10">
-        <div className=" flex flex-grow justify-center gap-5 items-center">
+        <div className="flex flex-grow justify-center gap-5 items-center">
           <p
             className="text-gray-100 md:text-lg text-base cursor-pointer hover:text-[#70ff00]"
             onClick={() => scrollToSection("about")}
@@ -45,13 +49,17 @@ export function Header() {
           </p>
           <button
             onClick={() => handleLanguageChange("pt")}
-            className="text-gray-100 md:text-lg text-base cursor-pointer hover:text-[#70ff00]"
+            className={`text-gray-100 md:text-lg text-base cursor-pointer hover:text-[#70ff00] ${
+              currentLanguage === "pt" ? "font-bold text-[#70ff00]" : ""
+            }`}
           >
             PT
           </button>
           <button
             onClick={() => handleLanguageChange("en")}
-            className="text-gray-100 md:text-lg text-base cursor-pointer hover:text-[#70f000]"
+            className={`text-gray-100 md:text-lg text-base cursor-pointer hover:text-[#70ff00] ${
+              currentLanguage === "en" ? "font-bold text-[#70ff00]" : ""
+            }`}
           >
             EN
           </button>
@@ -71,11 +79,14 @@ export function Header() {
             {t("front_end_developer_jr")}
           </h1>
           <div>
-            <Button onClick={handleResume} className="bg-[#70Ff00] mt-6 text-white rounded hover:text-[#70ff00] hover:bg-white font-semibold ">
+            <Button
+              onClick={handleResume}
+              className="bg-[#70Ff00] mt-6 text-white rounded hover:text-[#70ff00] hover:bg-white font-semibold "
+            >
               Download CV
             </Button>
           </div>
-          <div className=" flex gap-5 mt-10 text-center justify-center md:justify-start">
+          <div className="flex gap-5 mt-10 text-center justify-center md:justify-start">
             <a
               href="https://www.linkedin.com/in/danilobarros3/"
               className="text-gray-100 md:text-lg text-base flex gap-2 cursor-pointer hover:text-[#70ff00]"

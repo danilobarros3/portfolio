@@ -96,8 +96,8 @@ export function Projects() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:block text-white hover:text-[#70ff00]" />
-          <CarouselNext className="hidden md:block text-white hover:text-[#70ff00]" />
+          <CarouselPrevious className="hidden text-white hover:text-[#70ff00] items-center text-center" />
+          <CarouselNext className="hidden text-white hover:text-[#70ff00] items-center text-center" />
         </Carousel>
       </div>
     </div>
