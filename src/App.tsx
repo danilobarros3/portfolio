@@ -9,17 +9,13 @@ import { Skills } from "./components/Skills";
 export default function App() {
   return (
     <div className="bg-primary font-main min-h-screen flex flex-col">
-      <Toaster />
-      <Header />
-      <main className="flex-grow">
+        <Toaster richColors />
+        <Header />
         <About />
         <Skills />
         <Projects />
         <Companies />
-      </main>
       <Footer />
     </div>
   );
 }
-
-

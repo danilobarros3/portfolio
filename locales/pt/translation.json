@@ -1,5 +1,5 @@
 {
-  "about_me": "Sobre mim",
+  "about_me": "Sobre",
   "skills": "Habilidades",
   "projects": "Projetos",
   "home": "Início",
@@ -9,11 +9,14 @@
   "years_of_experience": "Anos de Experiência",
   "projects_completed": "Projetos Concluídos",
   "hello_i_am": "Olá, eu sou",
-  "front_end_developer": "Desenvolvedor Front-end",
-    "about_me_heading": "sobreMim()",
-    "about_me_paragraph": "Estudante do 5º semestre de Análise e Desenvolvimento de Sistemas na Facens e Desenvolvedor Front-end na Lionsoft, experiente em HTML5, CSS3, ReactJS, TypeScript, NextJS, JavaScript e Tailwind. Minha trajetória começou na área de suporte técnico, onde adquiri habilidades valiosas em comunicação, trabalho em equipe e resolução de problemas, oferecendo soluções rápidas e eficazes para os clientes. Atualmente, como Desenvolvedor Front-end, estou focado em criar interfaces de usuário eficientes, responsivas e atraentes. Estou sempre em busca de aprimorar minhas habilidades e aprender novas tecnologias para me manter atualizado com as tendências do mercado de desenvolvimento de software.",
-    "companies": "Empresas",
-    "freelancer": "Freelancer",
-    "hire_me": "Contrate-me!"
-  
+  "front_end_developer_jr": "Desenvolvedor Front-end Jr",
+  "about_me_heading": "sobreMim()",
+  "about_me_paragraph": "Sou um Desenvolvedor Front-end Jr com 2 ano de experiência em HTML5, CSS3, TailwindCss, ReactJS, TypeScript, NextJS, ReactNative e JavaScript. Atuo na Lionsoft como, onde desenvolvo interfaces modernas e responsivas. Estudo Análise e Desenvolvimento de Sistemas na Facens, estou no quinto semestre, e meu objetivo é me tornar um Desenvolvedor FullStack.",
+  "companies": "Empresas",
+  "freelancer": "Freelancer",
+  "hire_me": "Contrate-me!",
+  "technical_support": "Suporte Técnico - Estágio",
+  "october": "Outubro",
+  "september" : "Setembro",
+  "current" : "Atual"
 }
