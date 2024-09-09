@@ -19,7 +19,7 @@ export function Header() {
 
   const handleResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1v7nb1bjN5Dn2m25WTbbPQGu_9bfp-hXv/view?usp=sharing"
+      "https://drive.google.com/file/d/1PGcybzn8G9xndMlMObEsA3SI5qtDqVuA/view?usp=sharing"
     );
   };
 
