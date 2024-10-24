@@ -10,6 +10,7 @@ import axios from "axios";
 import projectsImage from "../assets/projects.png";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import { motion, useAnimation } from "framer-motion";
 
 interface Repo {
   name: string;
@@ -27,6 +28,7 @@ interface GitHubRepo {
 export function Projects() {
   const [projects, setProjects] = useState<Repo[]>([]);
   const [_, setLoading] = useState<boolean>(true);
+  const controls = useAnimation();
 
   const getDataProject = async () => {
     setLoading(true);
@@ -52,6 +54,25 @@ export function Projects() {
     getDataProject();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        const top = projectsSection.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          controls.start({
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeInOut" },
+          });
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [controls]);
+
   const { t } = useTranslation();
 
   return (
@@ -59,10 +80,19 @@ export function Projects() {
       id="projects"
       className="bg-primary py-4 px-4 md:px-16 lg:px-24 flex flex-col items-center gap-6 md:gap-10"
     >
-      <h1 className="text-[#70FF00] text-3xl md:text-4xl font-bold text-center">
+      <motion.h1
+        className="text-[#70FF00] text-3xl md:text-4xl font-bold text-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}
+      >
         {t("projects")}
-      </h1>
-      <div className="w-full max-w-5xl">
+      </motion.h1>
+
+      <motion.div
+        className="w-full max-w-5xl"
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}
+      >
         <Carousel>
           <CarouselContent className="gap-4 md:gap-6 lg:gap-8 p-4 md:p-0">
             {projects.map((repo) => (
@@ -70,7 +100,10 @@ export function Projects() {
                 key={repo.name}
                 className="p-2 md:p-4 max-w-full sm:max-w-[90%] md:max-w-[45%] lg:max-w-[30%] mx-auto"
               >
-                <div className="grid gap-4 md:gap-6 items-center text-white">
+                <motion.div
+                  className="grid gap-4 md:gap-6 items-center text-white"
+                  whileHover={{ scale: 1.05 }}
+                >
                   <img
                     src={projectsImage}
                     alt={repo.name}
@@ -92,14 +125,14 @@ export function Projects() {
                       See on GitHub
                     </a>
                   </div>
-                </div>
+                </motion.div>
               </CarouselItem>
             ))}
           </CarouselContent>
           <CarouselPrevious className="hidden text-white hover:text-[#70ff00] items-center text-center" />
           <CarouselNext className="hidden text-white hover:text-[#70ff00] items-center text-center" />
         </Carousel>
-      </div>
+      </motion.div>
     </div>
   );
 }
