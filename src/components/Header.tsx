@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import imageDanilo from "../assets/imageDanilo.jpeg";
 import { Button } from "./ui/button";
+import "animate.css";
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -92,7 +93,7 @@ export function Header() {
             {t("hello_i_am")}
           </motion.p>
           <motion.h1
-            className="text-[#70FF00] text-3xl md:text-6xl font-bold"
+            className="text-[#70FF00] text-3xl md:text-6xl font-bold animate__animated animate__zoomIn"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 1 }}
@@ -100,21 +101,17 @@ export function Header() {
             &lt; D a n i l o
           </motion.h1>
           <motion.h1
-            className="text-[#70FF00] text-3xl md:text-6xl font-bold"
+            className="text-[#70FF00] text-3xl md:text-6xl font-bold animate__animated animate__zoomIn"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 1 }}
           >
             B a r r o s /&gt;
           </motion.h1>
-          <motion.h1
-            className="text-white mt-7 font-bold text-xl md:text-3xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 1 }}
-          >
+          <div className="text-white mt-7 font-bold text-xl md:text-3xl animate__animated animate__flip">
             {t("front_end_developer_jr")}
-          </motion.h1>
+          </div>
+
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
