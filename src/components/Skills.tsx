@@ -65,18 +65,18 @@ export function Skills() {
           alt="JavaScript"
           className="w-16 h-16 md:w-24 md:h-24"
         />
-        <img
-          src={htmlImage}
-          alt="HTML"
-          className="w-16 h-16 md:w-24 md:h-24"
-        />
+        <img src={htmlImage} alt="HTML" className="w-16 h-16 md:w-24 md:h-24" />
         <img src={cssImage} alt="CSS" className="w-16 h-16 md:w-24 md:h-24" />
         <img
           src={reactImage}
           alt="ReactJS"
           className="w-16 h-16 md:w-24 md:h-24"
         />
-        <img src={nextImage} alt="NextJS" className="w-16 h-16 md:w-24 md:h-24" />
+        <img
+          src={nextImage}
+          alt="NextJS"
+          className="w-16 h-16 md:w-24 md:h-24"
+        />
         <img
           src={nodejsImage}
           alt="NodeJS"
